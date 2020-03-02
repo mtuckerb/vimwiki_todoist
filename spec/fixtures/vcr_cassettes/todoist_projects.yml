@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync/
+    body:
+      encoding: UTF-8
+      string: token=91fb67be66349e808ba46022aa3c59d58ca71ecd&resource_types=%5B%22projects%22%5D
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Mon, 02 Mar 2020 20:12:43 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=0cc5c95eb6f4413d8447fe68f14163d9; Expires=Thu, 28-Feb-2030 20:12:43 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 a943a1ebb8e2c8c07b4f4bd42d6d0d2b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - CDG3-C1
+      X-Amz-Cf-Id:
+      - GzFbWtazf0Hkd5UmyA_QO4oDzYZF5jzwIPiDt_jEKg1p6BsSAodwOg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"sync_token":"b_ujqHL8yk1UT4SchUfBWH1t3keZY1a9-LlhqSHZ3YYeu_9dM3ifBBFSg6j3tGeMuymwl274NHT48LFtS5r5SI1cS6bV4PDa5QOMgdditjhW","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230412164,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Welcome
+        \ud83d\udc4b","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230412165},{"name":"Wunderlist
+        Import","is_favorite":0,"color":47,"is_deleted":0,"collapsed":1,"parent_id":null,"child_order":2,"is_archived":0,"shared":false,"id":2230413138},{"name":"Les
+        courses","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":1,"is_archived":0,"shared":false,"id":2230413139},{"name":"Groceries","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":2,"is_archived":0,"shared":false,"id":2230413141},{"name":"Tech
+        support help","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":3,"is_archived":0,"shared":false,"id":2230413142},{"name":"Ruby''s
+        wishlist","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":4,"is_archived":0,"shared":false,"id":2230413143},{"name":"Wishlist","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":5,"is_archived":0,"shared":false,"id":2230413144},{"name":"To
+        buy","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":6,"is_archived":0,"shared":false,"id":2230413145},{"name":"Chandlery
+        list","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":7,"is_archived":0,"shared":false,"id":2230413146},{"name":"Provisions","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":8,"is_archived":0,"shared":false,"id":2230413147},{"name":"Boat
+        yard","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":9,"is_archived":0,"shared":false,"id":2230413148},{"name":"V
+        Berth Portside Forward","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":10,"is_archived":0,"shared":false,"id":2230413149},{"name":"Under
+        Miles'' Bed","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":11,"is_archived":0,"shared":false,"id":2230413150},{"name":"In
+        the water heater spot","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":12,"is_archived":0,"shared":false,"id":2230413151},{"name":"V
+        Berth Starboard Foreward","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":13,"is_archived":0,"shared":false,"id":2230413152},{"name":"Under
+        Portside Setee","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":14,"is_archived":0,"shared":false,"id":2230413153},{"name":"Under
+        Starboard Setee","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":15,"is_archived":0,"shared":false,"id":2230413154},{"name":"Things
+        to download","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":16,"is_archived":0,"shared":false,"id":2230413155},{"name":"Tucker''s
+        wishlist","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":17,"is_archived":0,"shared":false,"id":2230413156},{"name":"inbox","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":18,"is_archived":0,"shared":false,"id":2230413158},{"name":"For
+        Tucker to read","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":19,"is_archived":0,"shared":false,"id":2230413159}]}'
+    http_version: null
+  recorded_at: Mon, 02 Mar 2020 20:12:43 GMT
+recorded_with: VCR 5.1.0
