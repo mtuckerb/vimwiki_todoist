@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe VimwikiParser do
 
-  let(:vimwiki){ VimwikiParser.new(vimwiki_dir: './spec/fixtures', date: Date.parse("2019-07-02")) }
+  let(:vimwiki){ VimwikiParser.new(date: Date.parse("2019-07-02")) }
 
   it "parses a wiki file" do
     expect(vimwiki.todos.count).to  eq(5) 

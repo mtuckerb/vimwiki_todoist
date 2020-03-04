@@ -1,11 +1,6 @@
-Bundler.require
-require 'rubygems'
-require 'bundler/setup'
+APP_ENV = 'test'
+require './application'
 require 'webmock/rspec'
-Dir.glob(File.join('./lib', '**', '*.rb'), &method(:require))
-require 'dotenv'
-Dotenv.load('.env.test')
-
 require 'vcr'
 
 VCR.configure do |config|

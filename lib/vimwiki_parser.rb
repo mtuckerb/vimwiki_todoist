@@ -5,7 +5,8 @@ class VimwikiParser
 
   attr_accessor :wiki, :todos
 
-  def initialize( vimwiki_dir: "/Users/mtuckerbradford/vimwiki/diary", date: Date.today.strftime("%Y-%m-%d") )
+  def initialize(date: Date.today.strftime("%Y-%m-%d"))
+    vimwiki_dir = ENV["VIMWIKI_DIR"]
     file = File.join(vimwiki_dir, "#{date}.md")
     return unless File.file?(file)
     @wiki = File.readlines(file)
