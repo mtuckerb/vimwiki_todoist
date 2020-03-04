@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: resource_types=%5B%22projects%22%5D&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '510'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 04 Mar 2020 06:04:59 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=4e6980e2af144d9b8cb555462ddfb94b; Expires=Sat, 02-Mar-2030 06:04:59 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 5f8ce6fad85064c6a8d3486ad2c8e170.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR61-C2
+      X-Amz-Cf-Id:
+      - vrxs5yXCDAkbosrmVq-eD-tGXQSywvnxZMDGtvkhKFHg1zJmWwPWaw==
+    body:
+      encoding: UTF-8
+      string: '{"sync_token":"vy1pcgPjD4HfRixNQGJCPpi2ncCs8h4iAsEBIVwXAE_utCsCQCXNFe_lheJwQ2QMHspesvdrlAEF6PbgwTgddcvnUKN-JIrIy47Q6Dfg9PQe","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230497751,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Test
+        Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230497753}]}'
+    http_version: null
+  recorded_at: Wed, 04 Mar 2020 06:04:59 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/projects/get_data
+    body:
+      encoding: UTF-8
+      string: project_id=2230497753&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 04 Mar 2020 06:05:04 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=d5510efb3c2a4a1ab59d493872198cc9; Expires=Sat, 02-Mar-2030 06:05:04 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 4679bcdf12b82fd8e0db5832beb9e1ef.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR61-C2
+      X-Amz-Cf-Id:
+      - 3XNIn1Cozv9hD4H5m5zEoMdPZhHbukREjcNfwNRjPud3CVqKcnegrg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
+        over this task & click `(i)` to view its details","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":1},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723895,"content":"You
+        can add subtasks here! \u2705","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:32Z","id":3729726147,"content":"a
+        completed subtask","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:08Z","id":3729724948,"content":"Here''s
+        another task","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
+        Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
+    http_version: null
+  recorded_at: Wed, 04 Mar 2020 06:05:04 GMT
+recorded_with: VCR 5.1.0

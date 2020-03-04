@@ -1,22 +1,15 @@
-require 'bundler/setup'
-Bundler.require
-require 'dotenv/load'
-require 'json'
+# frozen_string_literal: true
 
 class Todoist
+  require_relative './todoist/projects'
+  require_relative './todoist/items'
+  require_relative './todoist/api'
   API_KEY=ENV['API_KEY']
-  include HTTParty
 
-  base_uri "https://api.todoist.com/sync/v8/sync"
 
   def self.projects
-    options = {
-      body: {
-        token: ENV['API_KEY'],
-        resource_types: '["projects"]'
-      }
-    }
-    response = post("", options)
-    #JSON.parse response,  symbolize_names: true
+    Todoist::Projects.new
   end
+
+
 end

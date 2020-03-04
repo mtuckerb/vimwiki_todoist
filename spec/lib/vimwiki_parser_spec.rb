@@ -2,13 +2,17 @@ require 'spec_helper'
 
 RSpec.describe VimwikiParser do
 
-  let(:vimwiki){ VimwikiParser.new(vimwiki_dir: './spec/fixtures', date: "2020-01-02") }
+  let(:vimwiki){ VimwikiParser.new(vimwiki_dir: './spec/fixtures', date: Date.parse("2019-07-02")) }
 
   it "parses a wiki file" do
-    expect(vimwiki.wiki.size).to  be(14) 
+    expect(vimwiki.todos.count).to  eq(5) 
+  end
+
+  it "does not parse non todo lines" do
+    expect(vimwiki.todos).not_to include("Lingohub merge")
   end
 
   it 'finds all the todos' do
-    expect(vimwiki.parse_wiki).to include({status: " ", todo: "Fix `text_count_not_update_roles` to be `…role'"})
+    expect(vimwiki.parse_wiki).to include({status: " ", todo: "An out of place todo"})
   end
 end

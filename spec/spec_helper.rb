@@ -1,9 +1,10 @@
+Bundler.require
 require 'rubygems'
 require 'bundler/setup'
-require './lib/vimwiki_parser.rb'
-require './lib/todoist.rb'
 require 'webmock/rspec'
-Bundler.require
+Dir.glob(File.join('./lib', '**', '*.rb'), &method(:require))
+require 'dotenv'
+Dotenv.load('.env.test')
 
 require 'vcr'
 
