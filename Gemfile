@@ -5,6 +5,7 @@ gem 'dotenv'
 gem 'byebug'
 gem 'awesome_print'
 gem 'faraday'
+gem 'activesupport'
 
 group :development, :test do
   gem 'guard'

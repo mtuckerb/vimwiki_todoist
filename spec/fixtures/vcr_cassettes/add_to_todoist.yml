@@ -1,0 +1,339 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/projects/get_data
+    body:
+      encoding: UTF-8
+      string: project_id=2230497753&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 01 Apr 2020 06:21:08 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=33d09df8c879417bb6054eab87c650b3; Expires=Sat, 30-Mar-2030 06:21:08 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 10131483569b12d46be11abd6f162905.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - xZw-k3q4tYw6OyCmOODNjnJWzH1eSJzSnP5x2ewriaPb9-H6jbqL1w==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
+        over this task & click `(i)` to view its details","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":1},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723895,"content":"You
+        can add subtasks here! \u2705","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:32Z","id":3729726147,"content":"a
+        completed subtask","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":1,"date_added":"2020-04-01T06:03:54Z","id":3787931209,"content":"A
+        Task that shouldn''t exist here.","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:08Z","id":3729724948,"content":"Here''s
+        another task","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":2,"date_added":"2020-04-01T06:04:28Z","id":3787932070,"content":"Organize
+        a conversation about Project Adoption KPIs as driver for a design","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
+        Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
+    http_version: null
+  recorded_at: Wed, 01 Apr 2020 06:21:08 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: resource_types=%5B%22projects%22%5D&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '510'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 01 Apr 2020 06:21:44 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=c2f1ead628c2496e8361bda388cc77c7; Expires=Sat, 30-Mar-2030 06:21:44 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 71ac5938fae2311667bfbb1e1df1d673.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - 6QgSdOVegGImLs7vLtWzmsMEQoflsfV8rk_ABx4sCYwLyRqQlInfmw==
+    body:
+      encoding: UTF-8
+      string: '{"sync_token":"kHmCStjVY0K9wvQtiQnXUivA5_kTqZ0ROwhxiKzWdVvtX4t_Y8uaV1fg481LTqBpO1hfbz9hI6jyszgaCvUQcc6rGENdRChVla0A14uYZl3p","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230497751,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Test
+        Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230497753}]}'
+    http_version: null
+  recorded_at: Wed, 01 Apr 2020 06:21:44 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/projects/get_data
+    body:
+      encoding: UTF-8
+      string: project_id=2230497753&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 01 Apr 2020 06:21:45 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=2a3be738411a419aa6f8db20fd91cf33; Expires=Sat, 30-Mar-2030 06:21:45 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 10b6eeb8648a069cb8a332f054cd3047.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - f16WcNdU7wQd8bpF8EWo8KqnYm8m4gXBtvK4kimSlmdW1ueScVAKJQ==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
+        over this task & click `(i)` to view its details","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":1},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723895,"content":"You
+        can add subtasks here! \u2705","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:32Z","id":3729726147,"content":"a
+        completed subtask","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":1,"date_added":"2020-04-01T06:03:54Z","id":3787931209,"content":"A
+        Task that shouldn''t exist here.","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:08Z","id":3729724948,"content":"Here''s
+        another task","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":2,"date_added":"2020-04-01T06:04:28Z","id":3787932070,"content":"Organize
+        a conversation about Project Adoption KPIs as driver for a design","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
+        Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
+    http_version: null
+  recorded_at: Wed, 01 Apr 2020 06:21:45 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: resource_types=%5B%22projects%22%5D&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '510'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 01 Apr 2020 06:22:25 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=66720eaa852743b48bb6c613fb1fc044; Expires=Sat, 30-Mar-2030 06:22:25 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 fe71c2e88a632c65075c957a7abe5788.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - cwqF6006hawOX7w0mVI2sxDHy2Zaeo00Th-EGRpN5GWck47QyRolIQ==
+    body:
+      encoding: UTF-8
+      string: '{"sync_token":"kHmCStjVY0K9wvQtiQnXUivA5_kTqZ0ROwhxiKzWdVvtX4t_Y8uaV1fg481LTqBpO1hfbz9hI6jyszgaCvUQcc6rGENdRChVla0A14uYZl3p","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230497751,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Test
+        Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230497753}]}'
+    http_version: null
+  recorded_at: Wed, 01 Apr 2020 06:22:26 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/projects/get_data
+    body:
+      encoding: UTF-8
+      string: project_id=2230497753&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 01 Apr 2020 06:22:27 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=60ed6ccf17ce4841a53966dda0bacd73; Expires=Sat, 30-Mar-2030 06:22:27 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 656d1e740e270e1a97ba3d0855116928.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - nncgw-Gr2T8fBJnVws_WahHMMSHhl_rgCRWS8VqR9PKPWylt4SSgfw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
+        over this task & click `(i)` to view its details","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":1},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723895,"content":"You
+        can add subtasks here! \u2705","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:32Z","id":3729726147,"content":"a
+        completed subtask","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":1,"date_added":"2020-04-01T06:03:54Z","id":3787931209,"content":"A
+        Task that shouldn''t exist here.","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:08Z","id":3729724948,"content":"Here''s
+        another task","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":2,"date_added":"2020-04-01T06:04:28Z","id":3787932070,"content":"Organize
+        a conversation about Project Adoption KPIs as driver for a design","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
+        Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
+    http_version: null
+  recorded_at: Wed, 01 Apr 2020 06:22:27 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: commands=%5B%7B%22type%22%3A%22type%22%2C%22temp_id%22%3A%22117b435a-0cdf-46c5-a222-ef88a3d7e4e1%22%2C%22uuid%22%3A%22fa23092e-4c6a-4547-9f7a-0ac4124ee245%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Look+through+my+video+footage+for+Shaw+and+send+him+any+winners+from%22%7D%7D%2C%7B%22type%22%3A%22type%22%2C%22temp_id%22%3A%229122afcf-19ea-4faa-8407-519e8f1af250%22%2C%22uuid%22%3A%22378f8392-248f-4dd9-bca1-ee59f20dca83%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Help+Abby+by+finding+out+how+to+make+a+Mentor+card%22%7D%7D%2C%7B%22type%22%3A%22type%22%2C%22temp_id%22%3A%2222721ef3-a898-471f-80c6-3da431ec14f3%22%2C%22uuid%22%3A%2257dee1dd-3124-421c-a393-8d808aa8efd7%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Uniqueness+flag+so+user+won%27t+see+it+again+someone+working+on+it%22%7D%7D%2C%7B%22type%22%3A%22type%22%2C%22temp_id%22%3A%222c5e0fe6-74d7-4696-8a6e-3bc754720567%22%2C%22uuid%22%3A%2233370b36-89b0-4519-8288-04bb3388004c%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Organize+a+conversation+about+Project+Adoption+KPIs+as+driver+for+a+design%22%7D%7D%2C%7B%22type%22%3A%22type%22%2C%22temp_id%22%3A%22bad003fd-ac27-43b6-8879-1c11d4621a5b%22%2C%22uuid%22%3A%22725e7b3c-6f5d-42e2-a011-eef08ad1683f%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22An+out+of+place+todo%22%7D%7D%5D&resource_types%5B%5D=projects&resource_types%5B%5D=items&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 01 Apr 2020 06:22:27 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=c856d58a978048a588d66e8d285d3ba1; Expires=Sat, 30-Mar-2030 06:22:27 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 9503482155e233e99173b53da4a996ff.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - FGNu0Ehzyv7xSNmOQKsZKNL-6kKT2CFWArcQc4XvvArVwKCUNjY2Eg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"sync_status":{"fa23092e-4c6a-4547-9f7a-0ac4124ee245":{"error_tag":"INVALID_COMMAND","error_code":39,"http_code":400,"error_extra":{"command":"type"},"error":"An
+        invalid sync command was sent"},"57dee1dd-3124-421c-a393-8d808aa8efd7":{"error_tag":"INVALID_COMMAND","error_code":39,"http_code":400,"error_extra":{"command":"type"},"error":"An
+        invalid sync command was sent"},"33370b36-89b0-4519-8288-04bb3388004c":{"error_tag":"INVALID_COMMAND","error_code":39,"http_code":400,"error_extra":{"command":"type"},"error":"An
+        invalid sync command was sent"},"725e7b3c-6f5d-42e2-a011-eef08ad1683f":{"error_tag":"INVALID_COMMAND","error_code":39,"http_code":400,"error_extra":{"command":"type"},"error":"An
+        invalid sync command was sent"},"378f8392-248f-4dd9-bca1-ee59f20dca83":{"error_tag":"INVALID_COMMAND","error_code":39,"http_code":400,"error_extra":{"command":"type"},"error":"An
+        invalid sync command was sent"}},"temp_id_mapping":{},"full_sync":true,"sync_token":"kHmCStjVY0K9wvQtiQnXUivA5_kTqZ0ROwhxiKzWdVvtX4t_Y8uaV1fg481LTqBpO1hfbz9hI6jyszgaCvUQcc6rGENdRChVla0A14uYZl3p"}'
+    http_version: null
+  recorded_at: Wed, 01 Apr 2020 06:22:27 GMT
+recorded_with: VCR 5.1.0

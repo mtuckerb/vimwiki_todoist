@@ -6,11 +6,12 @@ class VimwikiParser
   attr_accessor :wiki, :todos
 
   def initialize(date: Date.today.strftime("%Y-%m-%d"))
-    vimwiki_dir = ENV["VIMWIKI_DIR"]
+    raise ::ArgumentError, "ENV['VIMWIKI_DIR'] is not set" unless vimwiki_dir = ENV["VIMWIKI_DIR"]
     file = File.join(vimwiki_dir, "#{date}.md")
-    return unless File.file?(file)
+    raise ::StandardError, "no file for #{date}" unless  File.file?(file)
     @wiki = File.readlines(file)
     @todos = parse_wiki unless @todos 
+    raise ::StandardError, "No todos Parsed" unless todos.count > 0
   end
 
   def each(&block)
@@ -18,14 +19,17 @@ class VimwikiParser
   end
 
   def parse_wiki
-    @todos = []
-    wiki.each do |line|
+    @todos = Todos.new
+    wiki.each_with_index do |line,index|
       if matches = line.match(/- \[(.)\] (.*)$/)
-        @todos.push({status: matches[1], todo: matches[2]})
+        @todos.push(Todo.new({status: matches[1], content: matches[2], order: index}))
       end
     end
-    return todos
+    todos
   end
 
+  def to_ary
+    todos
+  end
 
 end

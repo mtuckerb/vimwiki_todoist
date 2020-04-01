@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: commands=%5B%7B%22type%22%3A%22item_add%22%2C%22temp_id%22%3A%22d0f67eca-1597-445d-8fc5-bc61365d2ba1%22%2C%22uuid%22%3A%22bf0f48b9-158f-4b1b-89a9-6b5f152076a5%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Added+by+rspec+%27adds+an+item+to+todoist+project%27%22%7D%7D%5D&resource_types%5B%5D=projects&resource_types%5B%5D=items&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 31 Mar 2020 09:04:04 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=cd3cb428bfcd4bc2b11fd9a749aac515; Expires=Fri, 29-Mar-2030 09:04:04 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 23f61cf92a98db6b426338b85a31b05f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - cOJj2fawMy4sfJJgi_OFHMYytHQO9IK5oArf9i4XQ2VYs3U4wUfIkQ==
+    body:
+      encoding: UTF-8
+      string: '{"sync_status":{"bf0f48b9-158f-4b1b-89a9-6b5f152076a5":"ok"},"temp_id_mapping":{"d0f67eca-1597-445d-8fc5-bc61365d2ba1":3785949144},"full_sync":true,"sync_token":"a9lf78o7ScivxdvJfsu69C2Jj1ZfV0pfMEO8LydEm0pKcqYpMM34lBHIwSKL4UTSov700hznUlhZDfZXrxdyJeMnnhGIrpwM1-Bkikl_A26U"}'
+    http_version: null
+  recorded_at: Tue, 31 Mar 2020 09:04:04 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: commands=%5B%7B%22type%22%3A%22item_add%22%2C%22temp_id%22%3A%2230c195b5-d9b0-4562-90c2-1a648705c967%22%2C%22uuid%22%3A%2220c24a01-2b8c-4750-a96a-1c5bc049d720%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Added+by+rspec+%27adds+an+item+to+todoist+project%27%22%7D%7D%5D&resource_types%5B%5D=projects&resource_types%5B%5D=items&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 31 Mar 2020 09:05:54 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=cd7379a2925e4ae0bfaaeb22c8acf445; Expires=Fri, 29-Mar-2030 09:05:54 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 0fd12a25ab67f5f967cfdd1e5752efd4.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - qi8zkPL-j1glFKpWrSp-qM2l3eN-CCMXpwtD7goFlpVaRnMgNJuPGA==
+    body:
+      encoding: UTF-8
+      string: '{"sync_status":{"20c24a01-2b8c-4750-a96a-1c5bc049d720":"ok"},"temp_id_mapping":{"30c195b5-d9b0-4562-90c2-1a648705c967":3785952865},"full_sync":true,"sync_token":"qv8iFw5NCfMpnjaBGnHOupFjmzYrP7oFSzWAGWXwb0MIoR4nc38Ox-c3Pd82Ul91QDdiV288dHaruiMn2Sw8FDrvjG00ENrRdZa196mmSwvB"}'
+    http_version: null
+  recorded_at: Tue, 31 Mar 2020 09:05:54 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: commands=%5B%7B%22type%22%3A%22item_add%22%2C%22temp_id%22%3A%22f54d30cc-f5a0-4f57-941b-19a586974ded%22%2C%22uuid%22%3A%223b714e79-f1de-4e4d-81c4-105b6f65f070%22%2C%22args%22%3A%7B%22project_id%22%3A2230497753%2C%22content%22%3A%22Added+by+rspec+%27adds+an+item+to+todoist+project%27%22%7D%7D%5D&resource_types%5B%5D=projects&resource_types%5B%5D=items&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 31 Mar 2020 09:06:59 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=bfb044d4bbb1480a85f9c1cb422fa69b; Expires=Fri, 29-Mar-2030 09:06:59 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 0c62e8c958eb0d54f812cda141e660b7.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - LHR62-C4
+      X-Amz-Cf-Id:
+      - PsEjlFFkQ64VYYUJO454hqlIE6XtlHYdJmX4sLf34NUsOJplCBN_pQ==
+    body:
+      encoding: UTF-8
+      string: '{"sync_status":{"3b714e79-f1de-4e4d-81c4-105b6f65f070":"ok"},"temp_id_mapping":{"f54d30cc-f5a0-4f57-941b-19a586974ded":3785954641},"full_sync":true,"sync_token":"Rg3oIxUHalA81e4xJ5zX2uGyzPAKNweMrRxDZCYUdp12KTwM9ALENIOoZczTCKALmcICw4Q0t-YIAxvWG7hRkcQf0WfBq0SQyjP3mse3DC35"}'
+    http_version: null
+  recorded_at: Tue, 31 Mar 2020 09:06:59 GMT
+recorded_with: VCR 5.1.0

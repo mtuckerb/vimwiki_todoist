@@ -13,6 +13,6 @@ RSpec.describe VimwikiParser do
   end
 
   it 'finds all the todos' do
-    expect(vimwiki.parse_wiki).to include({status: " ", todo: "An out of place todo"})
+    expect(vimwiki.todos.map(&:content)).to include("An out of place todo")
   end
 end

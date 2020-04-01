@@ -4,6 +4,7 @@ class Todoist::Projects
   include Enumerable
 
   def initialize
+    @api = Todoist::Api.new
     projects unless @all
   end
 
@@ -12,9 +13,7 @@ class Todoist::Projects
   end
 
   def projects
-    options = {resource_types: '["projects"]', sync_token: "*" }
-    results = Todoist::Api.post(resource: "sync", options:  options)
-    @all = JSON.parse(results).dig("projects").map{|p| Project.new(p)}
+    @all = @api.get_projects.map{|p| Project.new(p)}
   end
 
   def where(args)
@@ -37,21 +36,25 @@ class Todoist::Projects
     @all
   end
 
+  def to_ary
+    @all
+  end
+
 end
 
 
 class Todoist::Projects::Project
-  attr_accessor :project
+  attr_accessor :project, :items
 
   def initialize(project)
+    @api = Todoist::Api.new
     @project = project
   end
 
   def items
     options =  { project_id: id }
-    #results = HTTParty.post("#{ENV['TODOIST_BASE_URI']}/projects/get_data", options).response.body
-    results = Todoist::Api.post(resource: "projects/get_data", options: options)
-    @all = Todoist::Items.new(JSON.parse(results).dig("items"))
+    results = @api.post(resource: "projects/get_data", options: options)
+    @items = Todoist::Items.new(JSON.parse(results).dig("items"), id)
   end
 
   def method_missing(method, *args)
