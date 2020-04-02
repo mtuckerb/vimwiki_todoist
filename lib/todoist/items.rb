@@ -42,7 +42,7 @@ class Todoist::Items::Item
 
   def to_todo
     ::Todo.new(content: self.content, 
-               status: self.status, 
+               status: self.checked, 
                order: self.order, 
                foreign_id: self.project_id)
   end

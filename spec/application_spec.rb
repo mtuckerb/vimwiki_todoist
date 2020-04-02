@@ -37,9 +37,8 @@ RSpec.describe Application do
   end
 
   it 'identifies status changes between projects' do
-    VCR.use_cassette('updated_items') do
-      skip
-      expect(app.changed_between_projects).to include
+    VCR.use_cassette('updated_items', record: :once) do
+      expect(app.changed_between_projects.map(&:content)).to include "Organize a conversation about Project Adoption KPIs as driver for a design"
     end
   end
 end

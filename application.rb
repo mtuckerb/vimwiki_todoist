@@ -5,9 +5,8 @@ class Application
 
   def initialize(project:, date: Date.today.strftime("%Y-%m-%d"))
     parse_todoist(project) unless @todoist
-    @vimwiki = parse_vimwiki(date) unless @vimwiki
-   @api = Todoist::Api.new
-
+    parse_vimwiki(date) unless @vimwiki
+    @api = Todoist::Api.new
   end
 
   def parse_todoist(project)
@@ -16,9 +15,9 @@ class Application
   end
 
   def parse_vimwiki(date)
-    @vimwiki = VimwikiParser.new(date: date)
+    @vimwiki = VimwikiParser.new(date: date).todos
   end
-  
+
   def sync_to_todoist
     #update_changed_to_todoist 
     add_missing_to_todoist
@@ -34,9 +33,13 @@ class Application
   end
 
   def changed_between_projects
-    vimwiki.select do |item| 
-      todoist_item todoist.find 
+   a = vimwiki.select do |item| 
+      todoist.find_by(content: item&.content)&.status != item.status
     end
+   b = todoist.select do |item|
+     vimwiki.find_by(content: item&.content)&.status != item.status
+   end
+   a + b
   end
 
 end

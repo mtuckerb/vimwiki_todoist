@@ -16,9 +16,17 @@ class Todo
    Todoist::Items::Item.new({
       content: content,
       order: order,
-      status: status,
+      checked: status,
       foreign_id: foreign_id
     },project_id) 
+  end
+
+  def status
+    if @status.nil? || @status == "" || @status == " " || @status == 0
+      @status = nil 
+    else
+      @status = true
+    end
   end
 end
 

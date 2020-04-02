@@ -27,30 +27,30 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 01 Apr 2020 06:25:42 GMT
+      - Thu, 02 Apr 2020 08:51:53 GMT
       Cache-Control:
       - no-cache
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Set-Cookie:
-      - csrf=642fd033b42a4d4baf1b2af66e827226; Expires=Sat, 30-Mar-2030 06:25:42 GMT;
+      - csrf=9552602c0ff547a98cf976afb084211e; Expires=Sun, 31-Mar-2030 08:51:53 GMT;
         Secure; Path=/; SameSite=None
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 6080b2713e502211e152f21f5c59c5a7.cloudfront.net (CloudFront)
+      - 1.1 1624c79cd07e6098196697a6a7907e4b.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - FRA53-C1
+      - CPH50-C1
       X-Amz-Cf-Id:
-      - Lq-XUDMCQNvjLuKXHGT5JbQM5WlhSCScHLWLUy7_MHBMI3XMvF5npQ==
+      - pn2ucoYv-Kyp0sBIgJjeEBeitRZWr-X-8FRYBdgO4nQGI_C7JYyoKg==
     body:
       encoding: UTF-8
-      string: '{"sync_token":"kHmCStjVY0K9wvQtiQnXUivA5_kTqZ0ROwhxiKzWdVvtX4t_Y8uaV1fg481LTqBpO1hfbz9hI6jyszgaCvUQcc6rGENdRChVla0A14uYZl3p","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230497751,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Test
+      string: '{"sync_token":"WLZt6USR23RZ4VZ0ZjLCfvDV-jmYc5ZSVEhwm3R5CIOSSJzhLdmIembB9-IfNb52MvYF3GRn8QfnT7U3bem3hS6hyYvO8jLCLKVBRaOxpw_z","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230497751,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Test
         Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230497753}]}'
     http_version: null
-  recorded_at: Wed, 01 Apr 2020 06:25:42 GMT
+  recorded_at: Thu, 02 Apr 2020 08:51:53 GMT
 - request:
     method: post
     uri: https://api.todoist.com/sync/v8/projects/get_data
@@ -80,34 +80,33 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Wed, 01 Apr 2020 06:25:43 GMT
+      - Thu, 02 Apr 2020 08:51:56 GMT
       Cache-Control:
       - no-cache
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Set-Cookie:
-      - csrf=f428a2d877704d9ebb53edd95edd0f06; Expires=Sat, 30-Mar-2030 06:25:43 GMT;
+      - csrf=269c3adad66e40ad85a166c9482ce6dd; Expires=Sun, 31-Mar-2030 08:51:56 GMT;
         Secure; Path=/; SameSite=None
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 997f66fda0069dac50a85c7a4fa51b7e.cloudfront.net (CloudFront)
+      - 1.1 acb35e6ef5d12e899aaf8732fdedd02c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - FRA53-C1
+      - CPH50-C1
       X-Amz-Cf-Id:
-      - yMjBHzOBC8w23nSiggLd1AkcOMYWCuZBo8g-v0SUpnsgJjZKMPzPRQ==
+      - AsNO-NSfWbM2963unTYUsAg6ImGqiBvgRluYPj4ygsnoEZY4BxwEcA==
     body:
       encoding: ASCII-8BIT
       string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
         over this task & click `(i)` to view its details","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":1},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723895,"content":"You
-        can add subtasks here! \u2705","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:32Z","id":3729726147,"content":"a
-        completed subtask","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":1,"date_added":"2020-04-01T06:03:54Z","id":3787931209,"content":"A
+        can add subtasks here! \u2705","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":3729723869,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":1,"date_added":"2020-04-01T06:03:54Z","id":3787931209,"content":"A
         Task that shouldn''t exist here.","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":2,"date_added":"2020-03-03T15:29:08Z","id":3729724948,"content":"Here''s
         another task","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0},{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":null,"in_history":0,"child_order":2,"date_added":"2020-04-01T06:04:28Z","id":3787932070,"content":"Organize
         a conversation about Project Adoption KPIs as driver for a design","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
         Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
     http_version: null
-  recorded_at: Wed, 01 Apr 2020 06:25:43 GMT
+  recorded_at: Thu, 02 Apr 2020 08:51:56 GMT
 recorded_with: VCR 5.1.0
