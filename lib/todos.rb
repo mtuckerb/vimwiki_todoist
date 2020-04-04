@@ -14,11 +14,15 @@ class Todos
   end
 
   def to_a
-    todos.to_a
+    todos
   end
 
   def to_ary
-    todos.to_a
+    todos
+  end
+
+  def [] index
+    @todos[index]
   end
 
   def each(&block)
@@ -36,7 +40,8 @@ class Todos
     end
   end
 
-  def to_todo(item, project_id: nil)
-    Todo.new(item, project_id: project_id)
+  def to_todo(item, foreign_id: nil)
+    item.merge(foreign_id: foreign_id) if foreign_id
+    Todo.new(item)
   end
 end

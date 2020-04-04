@@ -29,24 +29,24 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 02 Apr 2020 09:03:54 GMT
+      - Fri, 03 Apr 2020 19:32:42 GMT
       Cache-Control:
       - no-cache
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Set-Cookie:
-      - csrf=989b41880a414a0e9f1cdda565e12888; Expires=Sun, 31-Mar-2030 09:03:54 GMT;
+      - csrf=75f292d1ca474eabbf6757fa20087ed2; Expires=Mon, 01-Apr-2030 19:32:42 GMT;
         Secure; Path=/; SameSite=None
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 4bade328d3b2aa91384925c67cd91548.cloudfront.net (CloudFront)
+      - 1.1 c4cfd693df2d3c329a667c606d9185f1.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - CPH50-C1
       X-Amz-Cf-Id:
-      - YCLj1VURFI1SVsq_hdJqHL_FE6ga1AfDSMKVc4hxb5tTGv_pNiWNZQ==
+      - Ctk6KokE5QyJKhl7f2LOWQMJZGPN--nOtkuZ0PJJJAL_CF_B6zNv5A==
     body:
       encoding: ASCII-8BIT
       string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
@@ -57,58 +57,7 @@ http_interactions:
         a conversation about Project Adoption KPIs as driver for a design","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
         Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
     http_version: null
-  recorded_at: Thu, 02 Apr 2020 09:03:54 GMT
-- request:
-    method: post
-    uri: https://api.todoist.com/sync/v8/sync
-    body:
-      encoding: UTF-8
-      string: resource_types=%5B%22projects%22%5D&sync_token=%2A&token=650633c8efa78adb78a4646a50e7194a42ab00a1
-    headers:
-      User-Agent:
-      - Faraday v1.0.0
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '510'
-      Connection:
-      - keep-alive
-      Date:
-      - Thu, 02 Apr 2020 09:04:50 GMT
-      Cache-Control:
-      - no-cache
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      Set-Cookie:
-      - csrf=c92bdefe6f2345e7a0fcea2abd8e54fd; Expires=Sun, 31-Mar-2030 09:04:50 GMT;
-        Secure; Path=/; SameSite=None
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 ef25da0c32f918931915d02ad16016b9.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - CPH50-C1
-      X-Amz-Cf-Id:
-      - KRVP-2pHiQWiEgr8yMR1V1kEaeXQGX0uU4INeilYBF_I1EYmCkJP-Q==
-    body:
-      encoding: UTF-8
-      string: '{"sync_token":"AjMVckLSHbXRpQV5f8GWHE8ckl1FNy_f_SAVCPOnULW6bxqNApsX3eQtoClgdl43RTdARcCBOP1ur_eAuAigjdjVRXstmtkM2jB22G0GULXt","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230497751,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Test
-        Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230497753}]}'
-    http_version: null
-  recorded_at: Thu, 02 Apr 2020 09:04:50 GMT
+  recorded_at: Fri, 03 Apr 2020 19:32:42 GMT
 - request:
     method: post
     uri: https://api.todoist.com/sync/v8/projects/get_data
@@ -138,24 +87,24 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 02 Apr 2020 09:04:52 GMT
+      - Fri, 03 Apr 2020 19:33:11 GMT
       Cache-Control:
       - no-cache
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Set-Cookie:
-      - csrf=151a95a4d3b844b9ae536e0e730caae0; Expires=Sun, 31-Mar-2030 09:04:52 GMT;
+      - csrf=f5708eecef9142e19b0933bb2b5ac28f; Expires=Mon, 01-Apr-2030 19:33:11 GMT;
         Secure; Path=/; SameSite=None
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 cc493ed59590651c91f2b3884a8bc9f6.cloudfront.net (CloudFront)
+      - 1.1 6ca0922c4cb330aecc1b691bf382d465.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - CPH50-C1
       X-Amz-Cf-Id:
-      - HYx5AMQ0h8_WCnI_29mCIg_MICQB_RUwyuDS9v9BiuB23SsYDlJcDA==
+      - lIQNhtOGwrZS7JnaYf3pCKIuVGe_flheZq9rx-Penx52x1BtdWPZ4g==
     body:
       encoding: ASCII-8BIT
       string: '{"project":{"name":"Test Project","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"id":2230497753},"items":[{"is_deleted":0,"assigned_by_uid":null,"labels":[],"sync_id":null,"section_id":7489104,"in_history":0,"child_order":1,"date_added":"2020-03-03T15:28:43Z","id":3729723869,"content":"Hover
@@ -166,5 +115,74 @@ http_interactions:
         a conversation about Project Adoption KPIs as driver for a design","checked":0,"added_by_uid":27063118,"user_id":27063118,"collapsed":0,"due":null,"priority":1,"parent_id":null,"responsible_uid":null,"project_id":2230497753,"date_completed":null,"note_count":0}],"sections":[{"user_id":27063118,"name":"Welcome!
         Let\u2019s get started with a few tips","is_deleted":false,"is_archived":false,"sync_id":null,"section_order":1,"date_archived":null,"date_added":"2020-03-03T15:28:43Z","project_id":2230497753,"id":7489104,"collapsed":false}],"project_notes":[]}'
     http_version: null
-  recorded_at: Thu, 02 Apr 2020 09:04:52 GMT
+  recorded_at: Fri, 03 Apr 2020 19:33:12 GMT
+- request:
+    method: post
+    uri: https://api.todoist.com/sync/v8/sync
+    body:
+      encoding: UTF-8
+      string: resource_types=%5B%22projects%22%5D&sync_token=%2A&token=91fb67be66349e808ba46022aa3c59d58ca71ecd
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Sat, 04 Apr 2020 09:16:15 GMT
+      Cache-Control:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Set-Cookie:
+      - csrf=ebcbb35b25e643f7845974a63f30904b; Expires=Tue, 02-Apr-2030 09:16:15 GMT;
+        Secure; Path=/; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 89cb19c6f2c9ed0983294d3b12e80e43.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - FRA53-C1
+      X-Amz-Cf-Id:
+      - mxvqMxtk2UtUsXbMLWVFPJJH4wytkNpnIgJ-vKF9crapfH-FCJ9REg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"sync_token":"ujnbr8HzPEBrdlvei_4vwqEh9aNKooWjj98ZAX_jnj-EVQhipm9pnEOujPx1LVIllDXrN5Yxki2FQyYbnUqDbGHX4yK86eI4Muz-p5hfcuL8pA","temp_id_mapping":{},"full_sync":true,"projects":[{"is_favorite":0,"color":48,"collapsed":0,"inbox_project":true,"child_order":0,"id":2230412164,"name":"Inbox","is_deleted":0,"parent_id":null,"shared":false,"is_archived":0},{"name":"Welcome
+        \ud83d\udc4b","is_favorite":0,"color":48,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":1,"is_archived":0,"shared":false,"id":2230412165},{"name":"Wunderlist
+        Import","is_favorite":0,"color":47,"is_deleted":0,"collapsed":1,"parent_id":null,"child_order":2,"is_archived":0,"shared":false,"id":2230413138},{"name":"Les
+        courses","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":1,"is_archived":0,"shared":false,"id":2230413139},{"name":"Groceries","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":2,"is_archived":0,"shared":false,"id":2230413141},{"name":"Tech
+        support help","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":3,"is_archived":0,"shared":false,"id":2230413142},{"name":"Ruby''s
+        wishlist","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":4,"is_archived":0,"shared":false,"id":2230413143},{"name":"Wishlist","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":5,"is_archived":0,"shared":false,"id":2230413144},{"name":"To
+        buy","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":6,"is_archived":0,"shared":false,"id":2230413145},{"name":"Chandlery
+        list","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":7,"is_archived":0,"shared":false,"id":2230413146},{"name":"Provisions","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":8,"is_archived":0,"shared":false,"id":2230413147},{"name":"Boat
+        yard","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":9,"is_archived":0,"shared":false,"id":2230413148},{"name":"V
+        Berth Portside Forward","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":10,"is_archived":0,"shared":false,"id":2230413149},{"name":"Under
+        Miles'' Bed","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":11,"is_archived":0,"shared":false,"id":2230413150},{"name":"In
+        the water heater spot","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":12,"is_archived":0,"shared":false,"id":2230413151},{"name":"V
+        Berth Starboard Foreward","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":13,"is_archived":0,"shared":false,"id":2230413152},{"name":"Under
+        Portside Setee","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":14,"is_archived":0,"shared":false,"id":2230413153},{"name":"Under
+        Starboard Setee","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":15,"is_archived":0,"shared":false,"id":2230413154},{"name":"Things
+        to download","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":16,"is_archived":0,"shared":false,"id":2230413155},{"name":"Tucker''s
+        wishlist","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":17,"is_archived":0,"shared":false,"id":2230413156},{"name":"inbox","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":18,"is_archived":0,"shared":false,"id":2230413158},{"name":"For
+        Tucker to read","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":2230413138,"child_order":19,"is_archived":0,"shared":false,"id":2230413159},{"name":"Work","is_favorite":0,"color":47,"is_deleted":0,"collapsed":0,"parent_id":null,"child_order":21,"is_archived":0,"shared":false,"id":2232681786}]}'
+    http_version: null
+  recorded_at: Sat, 04 Apr 2020 09:16:15 GMT
 recorded_with: VCR 5.1.0

@@ -4,7 +4,7 @@ class Todoist::Projects
   include Enumerable
 
   def initialize
-    @api = Todoist::Api.new
+    @api ||= Todoist::Api.new
     projects unless @all
   end
 

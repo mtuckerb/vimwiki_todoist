@@ -10,6 +10,8 @@ class Todo
     @status = args.dig :status 
     @order = args.dig :order 
     @foreign_id = args.dig :foreign_id 
+    @foreign_id ||= args.dig :project_id 
+
   end
 
   def to_todoist(project_id)

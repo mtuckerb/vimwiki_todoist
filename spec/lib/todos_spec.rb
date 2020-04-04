@@ -24,6 +24,14 @@ RSpec.describe Todos do
     expect(new_todos.first.content).to eq("blerf")
   end
 
+  it 'instan with an array of hashes' do
+    new_todos = Todos.new(items: [
+      {content: "New Todo 1", order: 1, status: false},
+      {content: "New Todo 2", order: 1, status: false}
+    ])
+    expect(new_todos.first.content).to eq("New Todo 1")
+  end
+
   it 'instantiates with a single todo' do
     new_todos = Todos.new(items: @todo)
     expect(new_todos.first.content).to eq("blerf")

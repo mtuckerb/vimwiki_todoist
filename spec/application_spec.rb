@@ -32,13 +32,8 @@ RSpec.describe Application do
   end
   it 'adds missing entries to todoist' do
     VCR.use_cassette('add_to_todoist') do
-      app.sync_to_todoist
+      app.sync
     end
   end
 
-  it 'identifies status changes between projects' do
-    VCR.use_cassette('updated_items', record: :once) do
-      expect(app.changed_between_projects.map(&:content)).to include "Organize a conversation about Project Adoption KPIs as driver for a design"
-    end
   end
-end
