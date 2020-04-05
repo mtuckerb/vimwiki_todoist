@@ -1,4 +1,4 @@
-APP_ENV = 'test'
+ENV['APP_ENV'] = 'test'
 require './application'
 require 'webmock/rspec'
 require 'vcr'
@@ -6,14 +6,13 @@ require 'database_cleaner/sequel'
 
 
 RSpec.configure do |config|
-
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner[:sequel].strategy = :transaction
+    DatabaseCleaner[:sequel].clean_with(:truncation)
   end
 
   config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
+    DatabaseCleaner[:sequel].cleaning do
       example.run
     end
   end

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
-
-class Todoist::Items 
+require 'active_support/hash_with_indifferent_access'
+class Todoist::Items
   include Enumerable
 
   attr_accessor :all
 
   def initialize(items, project_id)
-    @all = items.map { |item| Item.new(item, project_id)} unless @all
+    @all ||= items.map { |item| Item.new(item, project_id) }
   end
 
   def to_a
@@ -26,12 +26,11 @@ class Todoist::Items
   end
 end
 
-
 class Todoist::Items::Item
- attr_accessor :item, :project_id
+  attr_accessor :item, :project_id
 
   def initialize(item, project_id)
-    @item = item
+    @item = ActiveSupport::HashWithIndifferentAccess.new item
     @project_id = project_id
   end
 
@@ -40,11 +39,8 @@ class Todoist::Items::Item
     api.add_item(self)
   end
 
-  def to_todo
-    ::Todo.new(content: self.content, 
-               status: self.checked, 
-               order: self.order, 
-               foreign_id: self.project_id)
+  def to_task
+    Task.find_or_create_todo(OpenStruct.new(content: @item['content'], status: @item['checked'], order: @item['order'], foreign_id: project_id))
   end
 
   def to_ary
@@ -52,7 +48,6 @@ class Todoist::Items::Item
   end
 
   def method_missing(method, *_args)
-    @item.dig(method)||@item.dig(method.to_s)
+    @item.dig(method) || @item.dig(method.to_s)
   end
-
 end

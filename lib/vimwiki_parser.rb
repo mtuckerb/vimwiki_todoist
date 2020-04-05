@@ -4,78 +4,48 @@ require 'date'
 class VimwikiParser
   include Enumerable
 
-  attr_accessor :wiki, :todos, :file
+  attr_accessor :file
 
   def initialize(date: Date.today.strftime("%Y-%m-%d"))
     raise ::ArgumentError, "ENV['VIMWIKI_DIR'] is not set" unless vimwiki_dir = ENV["VIMWIKI_DIR"]
+
     @file = File.join(vimwiki_dir, "#{date}.md")
     raise ::StandardError, "no file for #{date}" unless File.file?(file)
-    @todos = parse_wiki
-    raise ::StandardError, "No todos Parsed" unless todos.count > 0
-  end
-
-  def each(&block)
-    todos.each(&block)
-  end
-
-  def sort(&block)
-    todos.sort(&block)
-  end
-
-  def to_a
-    todos
-  end
-
-  def [] index
-    @todos[index]
   end
 
   def parse_wiki
-    @wiki = File.readlines(file)
-    wiki.each_with_index do |line, index|
-      if matches = line.match(/- \[(.)\] (.*)$/)
-        Task.create(status: matches[1], content: matches[2], order: index)
-      end
+    wiki = []
+    contents = File.read(file)
+    matches = contents.scan(/^(\s*) *- \[(.)\] (?:([\s\S]*?)(?=\n\s*- \[.\]|##|^-))/m)
+    matches.each_with_index do |match, index|
+      todo = OpenStruct.new(content: "#{match[0]}#{match[2].chomp}", status: match[1], order: index)
+      wiki.push todo
+      Task.find_or_create_todo(todo)
     end
-    todos
+    wiki
   end
 
-  def update(tasks)
-    tasks = Task.all.sort(&:order)
-    counter = 0 
-    its_on = 0
+  def update
+    parse_wiki
     output = []
-    wiki.each do |line|
-      if line.match(/## Daily Log$/)
-        its_on = 0
-        # if we get the the end, quickly put all of the remaing tasks on the
-        # list
-        tasks.select{|t| t.order > counter || !t.order.is_a?(Integer) }.each{|t| output.push format_task(t)}
+    File.open(file, "r+") do |file|
+      lines = lines = file.each_line.to_a
+      todo_start = lines.index{ |l| l =~ /## Daily Todos$/ }
+      todo_end = lines.index{ |l| l =~ /## Daily Log$/ }
+      ids_to_reject = ((todo_start + 1)..( todo_end - 1 ))
+      lines = lines.reject.each_with_index{ |_i, ix| ids_to_reject.include? ix }
+      Task.in_order.all.each_with_index do |task, id|
+        lines.insert((todo_start + id + 1), format_task(task))
       end
-      if its_on == 1
-        if (this_task = tasks.find{ |t| t.order == counter }) && is_todo_line(line)
-          output.push format_task(this_task)
-          counter += 1
-        else
-          # only increment after a task
-          counter += 1 if is_todo_line(line)
-        end
-      end
-      output.push line
-      its_on = 1 if line.match(/## Daily Todos$/)
+      file.rewind
+      lines.each{|l| file.puts l}
     end
-    new_wiki = File.open(file, "w"){|f| output.each{|l| f.puts l}}
   end
 
   def format_task(item)
-    "- [#{item.status ? 'X' : ' '}] #{item.content}"
-  end
-
-  def is_todo_line(line)
-    line.match(/\s*- \[.?\]/)
-  end
-
-  def to_ary
-    todos
+    leading_spaces = ""
+    # hack to re-indent child tasks until I tackle that
+    item.content.index(/[^ ]/).times{ leading_spaces += " " }
+    "#{leading_spaces}- [#{item.status ? 'X' : ' '}] #{item.content.strip}"
   end
 end
